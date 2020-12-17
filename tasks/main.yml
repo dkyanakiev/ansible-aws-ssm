@@ -20,7 +20,6 @@
     become_user: root
     yum:
       name: "https://s3.amazonaws.com/ec2-downloads-windows/SSMAgent/latest/linux_amd{{ url }}/amazon-ssm-agent.rpm"
-      state: present
     when: ansible_os_family == 'RedHat'
 
   - name: Install deb file for Debian family 32/64-bit
