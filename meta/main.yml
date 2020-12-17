@@ -115,7 +115,7 @@ galaxy_info:
   #  - 9.3
   - name: Ubuntu
     versions:
-  #  - all
+    - all
   #  - lucid
   #  - maverick
   #  - natty
@@ -124,11 +124,11 @@ galaxy_info:
   #  - quantal
   #  - raring
   #  - saucy
-    - trusty
+  #  - trusty
   #  - utopic
   #  - vivid
   #  - wily
-    - xenial
+  # - xenial
   #- name: SLES
   #  versions:
   #  - all
@@ -148,9 +148,9 @@ galaxy_info:
   #  - any
   - name: Debian
     versions:
-  #  - all
+    - all
   #  - etch
-    - jessie
+  #  - jessie
   #  - lenny
   #  - sid
   #  - squeeze
