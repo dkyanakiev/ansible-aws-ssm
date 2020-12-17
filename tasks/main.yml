@@ -17,7 +17,7 @@
     become: yes
     become_user: admin
     yum:
-      name: "https://s3.amazonaws.com/ec2-downloads-windows/SSMAgent/latest/linux_{{ url }}/amazon-ssm-agent.rpm"
+      name: "https://s3.amazonaws.com/ec2-downloads-windows/SSMAgent/latest/linux_amd{{ url }}/amazon-ssm-agent.rpm"
       state: present
     when: ansible_os_family == 'RedHat'
 
@@ -25,7 +25,7 @@
     become: yes
     become_user: admin
     apt:
-      deb: "https://s3.amazonaws.com/ec2-downloads-windows/SSMAgent/latest/debian_{{ url }}/amazon-ssm-agent.deb"
+      deb: "https://s3.amazonaws.com/ec2-downloads-windows/SSMAgent/latest/debian_amd{{ url }}/amazon-ssm-agent.deb"
     when: ansible_os_family == 'Debian'
 
   # - include: register.yml
