@@ -15,7 +15,7 @@
 
   - name: Install rpm file for Redhat Family (Amazon Linux, RHEL, and CentOS) 32/64-bit
     become: yes
-    become_user: root
+    become_user: admin
     yum:
       name: "https://s3.amazonaws.com/ec2-downloads-windows/SSMAgent/latest/linux_{{ url }}/amazon-ssm-agent.rpm"
       state: present
@@ -23,7 +23,7 @@
 
   - name: Install deb file for Debian family 32/64-bit
     become: yes
-    become_user: root
+    become_user: admin
     apt:
       deb: "https://s3.amazonaws.com/ec2-downloads-windows/SSMAgent/latest/debian_{{ url }}/amazon-ssm-agent.deb"
     when: ansible_os_family == 'Debian'
@@ -33,7 +33,7 @@
 
   - name: Register to service
     become: yes
-    become_user: root
+    become_user: admin
     service:
       name: amazon-ssm-agent
       enabled: yes
