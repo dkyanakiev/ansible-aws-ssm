@@ -1,5 +1,7 @@
 ---
 - hosts: cloudgate
+  vars:
+    url: '64'
 
   tasks:
   - name: Get CPU architecture
